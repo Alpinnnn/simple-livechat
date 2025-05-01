@@ -1,0 +1,324 @@
+@font-face {
+    font-family: 'Amulya-Bold';
+    src: url("/assets/fonts/Amulya-Bold.otf") format("opentype");
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Synonim_Regular';
+    src: url("/assets/fonts/Synonym-Regular.otf") format("opentype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+:root {
+    --primary-color: #4CAF50;
+    --secondary-color: #45a049;
+    --background-color: #f0f2f5;
+    --card-color: #ffffff;
+    --text-color: #333333;
+    --text-secondary: #666666;
+    --heading-font: 'Amulya-Bold', sans-serif;
+    --body-font: 'Synonim_Regular', sans-serif;
+    --chat-bg: #e5ded8;
+    --user-message: #dcf8c6;
+    --admin-message: #ffffff;
+}
+
+.dark-mode {
+    --primary-color: #4CAF50;
+    --secondary-color: #45a049;
+    --background-color: #1a1a1a;
+    --card-color: #2d2d2d;
+    --text-color: #ffffff;
+    --text-secondary: #cccccc;
+    --chat-bg: #121212;
+    --user-message: #005C4B;
+    --admin-message: #2A2F32;
+}
+
+* {
+    font-family: var(--body-font);
+}
+
+h1, h2, h3, h4, h5, h6,
+.card-header h5,
+.bottom-bar h3 {
+    font-family: var(--heading-font);
+}
+
+.dark-mode body {
+    background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+}
+
+.dark-mode .calculator {
+    background-color: var(--card-color);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.dark-mode .result {
+    background: linear-gradient(135deg, #2d2d2d 0%, #1a1a1a 100%);
+}
+
+.dark-mode input[type="date"] {
+    background-color: #1a1a1a;
+    color: var(--text-color);
+    border-color: #444;
+}
+
+body.dark-mode {
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+.dark-mode .card {
+    background-color: var(--card-color);
+    box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.3);
+}
+
+.dark-mode .card-header {
+    background-color: var(--secondary-color) !important;
+}
+
+.dark-mode .chat-messages {
+    background-color: var(--chat-bg);
+}
+
+.dark-mode .chat-input {
+    background-color: var(--card-color);
+    border-top: 1px solid #444;
+}
+
+.dark-mode #message {
+    background-color: #3a3a3a;
+    border-color: #555;
+    color: var(--text-color);
+}
+
+.dark-mode .message.user {
+    background-color: var(--user-message);
+    color: #fff;
+}
+
+.dark-mode .message.admin {
+    background-color: var(--admin-message);
+    color: #eee;
+}
+
+.dark-mode .admin-chat .message.user {
+    background-color: var(--admin-message);
+    color: #eee;
+}
+
+.dark-mode .admin-chat .message.admin {
+    background-color: var(--user-message);
+    color: #fff;
+}
+
+.dark-mode .message.user:after {
+    background: radial-gradient(circle at top right, transparent 0.8rem, var(--user-message) 0);
+}
+
+.dark-mode .message.admin:after {
+    background: radial-gradient(circle at top left, transparent 0.8rem, var(--admin-message) 0);
+}
+
+.dark-mode .admin-chat .message.user:after {
+    background: radial-gradient(circle at top left, transparent 0.8rem, var(--admin-message) 0);
+}
+
+.dark-mode .admin-chat .message.admin:after {
+    background: radial-gradient(circle at top right, transparent 0.8rem, var(--user-message) 0);
+}
+
+/* Settings and Control Buttons */
+.control-buttons {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    z-index: 1000;
+}
+
+/* Settings Button */
+.settings-btn {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.settings-btn:hover {
+    transform: scale(1.1);
+}
+
+/* Admin Button */
+.admin-btn {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: var(--secondary-color);
+    color: white;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.admin-btn:hover {
+    transform: scale(1.1);
+    color: white;
+}
+
+/* Bottom Bar */
+.bottom-bar {
+    position: fixed;
+    bottom: -300px;
+    left: 0;
+    right: 0;
+    width: 100%;
+    background: var(--card-color);
+    padding: 20px;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2);
+    transition: bottom 0.3s ease;
+    z-index: 1000;
+}
+
+.bottom-bar.active {
+    bottom: 0;
+}
+
+.bottom-bar-content {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.bottom-bar h3 {
+    color: var(--text-color);
+    margin-bottom: 20px;
+}
+
+.settings-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    color: var(--text-color);
+}
+
+/* Switch */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: .4s;
+}
+
+input:checked + .slider {
+    background-color: var(--primary-color);
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
+
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+/* Social Links */
+.social-links {
+    margin-top: 20px;
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+.social-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.social-btn.website {
+    background: linear-gradient(135deg, #2196F3 0%, #1976D2 100%);
+}
+
+.social-btn.github {
+    background: linear-gradient(135deg, #333 0%, #000 100%);
+}
+
+.social-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.social-btn:active {
+    transform: translateY(0);
+}
+
+.social-btn i {
+    font-size: 1.2rem;
+}
+
+/* Dark Mode Social Buttons */
+.dark-mode .social-btn.website {
+    background: linear-gradient(135deg, #1976D2 0%, #0D47A1 100%);
+}
+
+.dark-mode .social-btn.github {
+    background: linear-gradient(135deg, #000 0%, #111 100%);
+} 
