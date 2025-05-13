@@ -10,7 +10,7 @@ if (isset($_SESSION['user_id'])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WhatsApp Clone</title>
+    <title>Register - WhatsApp Clone</title>
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/responsive.css">
     <link rel="stylesheet" href="assets/css/dark-mode.css">
@@ -20,7 +20,7 @@ if (isset($_SESSION['user_id'])) {
     <div class="login-container">
         <div class="login-header">
             <h1>WhatsApp Clone</h1>
-            <p>Login to your account</p>
+            <p>Create a new account</p>
             <div class="theme-toggle">
                 <label class="switch">
                     <input type="checkbox" id="dark-mode-toggle">
@@ -30,14 +30,26 @@ if (isset($_SESSION['user_id'])) {
         </div>
         
         <div class="login-form">
-            <form action="auth/login.php" method="POST">
+            <form action="auth/register.php" method="POST">
                 <?php if (isset($_GET['error'])) { ?>
                     <div class="error"><?php echo $_GET['error']; ?></div>
                 <?php } ?>
                 
+                <?php if (isset($_GET['success'])) { ?>
+                    <div class="success"><?php echo $_GET['success']; ?></div>
+                <?php } ?>
+                
                 <div class="form-group">
-                    <label for="username">Username</label>
-                    <input type="text" id="username" name="username" required>
+                    <label for="fullname">Full Name</label>
+                    <input type="text" id="fullname" name="fullname" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="username">Username (Tag: @username)</label>
+                    <div class="input-with-icon">
+                        <span class="input-icon">@</span>
+                        <input type="text" id="username" name="username" required>
+                    </div>
                 </div>
                 
                 <div class="form-group">
@@ -46,12 +58,16 @@ if (isset($_SESSION['user_id'])) {
                 </div>
                 
                 <div class="form-group">
-                    <button type="submit">Login</button>
+                    <label for="confirm_password">Confirm Password</label>
+                    <input type="password" id="confirm_password" name="confirm_password" required>
+                </div>
+                
+                <div class="form-group">
+                    <button type="submit">Register</button>
                 </div>
                 
                 <div class="form-footer">
-                    <p>Don't have an account? <a href="register.php">Register</a></p>
-                    <p><a href="help.php">Help & FAQ</a></p>
+                    <p>Already have an account? <a href="index.php">Login</a></p>
                 </div>
             </form>
         </div>

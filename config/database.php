@@ -1,27 +1,18 @@
 <?php
-class Database {
-    private $host = "localhost";
-    private $db_name = "chat_app";
-    private $username = "root";
-    private $password = "";
-    public $conn;
+// Database configuration
+$host = "localhost";
+$username = "root";  // Change this to your database username
+$password = "";      // Change this to your database password
+$database = "whatsapp_clone";
 
-    public function getConnection() {
-        $this->conn = null;
+// Create connection
+$conn = new mysqli($host, $username, $password, $database);
 
-        try {
-            $this->conn = new PDO(
-                "mysql:host=" . $this->host . ";dbname=" . $this->db_name,
-                $this->username,
-                $this->password
-            );
-            $this->conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-            $this->conn->exec("set names utf8");
-        } catch(PDOException $exception) {
-            echo "Connection error: " . $exception->getMessage();
-        }
-
-        return $this->conn;
-    }
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
 }
+
+// Set charset to UTF-8
+$conn->set_charset("utf8mb4");
 ?> 

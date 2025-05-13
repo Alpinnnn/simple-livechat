@@ -1,0 +1,257 @@
+/* Dark Mode CSS for WhatsApp Clone */
+body.dark-mode {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+/* Login and Register pages */
+.dark-mode .login-page {
+    background-color: #0a2e38;
+}
+
+.dark-mode .login-container {
+    background-color: #1f1f1f;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.dark-mode .login-header h1 {
+    color: #00a884;
+}
+
+.dark-mode .form-group label {
+    color: #e0e0e0;
+}
+
+.dark-mode .form-group input {
+    background-color: #2c2c2c;
+    border: 1px solid #444;
+    color: #e0e0e0;
+}
+
+.dark-mode .form-group input:focus {
+    border-color: #00a884;
+}
+
+.dark-mode .form-group button {
+    background-color: #00a884;
+}
+
+.dark-mode .form-group button:hover {
+    background-color: #008b6e;
+}
+
+.dark-mode .form-footer {
+    color: #b0b0b0;
+}
+
+.dark-mode .form-footer a {
+    color: #00a884;
+}
+
+/* Main chat layout */
+.dark-mode .sidebar {
+    background-color: #1f1f1f;
+    border-right: 1px solid #333;
+}
+
+.dark-mode .chat-area {
+    background-color: #1f1f1f;
+    background-image: url('../images/chat-bg-dark.png');
+}
+
+/* User profile section */
+.dark-mode .user-profile {
+    background-color: #222;
+}
+
+.dark-mode .profile-info h3 {
+    color: #e0e0e0;
+}
+
+.dark-mode .profile-info p {
+    color: #999;
+}
+
+.dark-mode .dropdown-toggle {
+    color: #aaa;
+}
+
+/* Dropdown menu */
+.dark-mode .dropdown-menu {
+    background-color: #2c2c2c;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.dark-mode .dropdown-menu a {
+    color: #e0e0e0;
+}
+
+.dark-mode .dropdown-menu a:hover {
+    background-color: #333;
+}
+
+/* Search section */
+.dark-mode .search-container {
+    background-color: #1f1f1f;
+}
+
+.dark-mode .search-box {
+    background-color: #2c2c2c;
+}
+
+.dark-mode .search-box i {
+    color: #999;
+}
+
+.dark-mode .search-box input {
+    background-color: #2c2c2c;
+    color: #e0e0e0;
+}
+
+/* Chats list */
+.dark-mode .chat-item {
+    border-bottom: 1px solid #333;
+}
+
+.dark-mode .chat-item.active {
+    background-color: #323232;
+}
+
+.dark-mode .chat-item:hover {
+    background-color: #2a2a2a;
+}
+
+.dark-mode .chat-item-name {
+    color: #e0e0e0;
+}
+
+.dark-mode .chat-item-last-message {
+    color: #999;
+}
+
+.dark-mode .chat-item-time {
+    color: #888;
+}
+
+.dark-mode .message-status i {
+    color: #777;
+}
+
+.dark-mode .message-status i.text-read {
+    color: #00a884;
+}
+
+/* Chat header */
+.dark-mode .chat-header {
+    background-color: #222;
+    border-left: 1px solid #333;
+}
+
+.dark-mode .chat-contact h3 {
+    color: #e0e0e0;
+}
+
+.dark-mode .chat-contact p {
+    color: #999;
+}
+
+.dark-mode .btn-icon {
+    color: #aaa;
+}
+
+.dark-mode .btn-icon:hover {
+    background-color: #333;
+}
+
+/* Chat messages */
+.dark-mode .message.sent .message-content {
+    background-color: #005c4b;
+    color: #e0e0e0;
+}
+
+.dark-mode .message.received .message-content {
+    background-color: #222e35;
+    color: #e0e0e0;
+}
+
+.dark-mode .message-sender {
+    color: #00a884;
+}
+
+.dark-mode .message-time {
+    color: #999;
+}
+
+/* Chat input area */
+.dark-mode .chat-input {
+    background-color: #222;
+}
+
+.dark-mode .chat-input input {
+    background-color: #2c2c2c;
+    color: #e0e0e0;
+}
+
+.dark-mode .send-btn {
+    background-color: #00a884;
+}
+
+.dark-mode .send-btn:hover {
+    background-color: #008b6e;
+}
+
+/* No active chat view */
+.dark-mode .no-chat-selected {
+    background-color: #1f1f1f;
+}
+
+.dark-mode .no-chat-content h2 {
+    color: #e0e0e0;
+}
+
+.dark-mode .no-chat-content p {
+    color: #999;
+}
+
+/* Modal styles */
+.dark-mode .modal-content {
+    background-color: #1f1f1f;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.dark-mode .modal-header {
+    border-bottom: 1px solid #333;
+}
+
+.dark-mode .modal-header h3 {
+    color: #00a884;
+}
+
+.dark-mode .close-modal {
+    color: #aaa;
+}
+
+.dark-mode .user-item {
+    border-bottom: 1px solid #333;
+}
+
+.dark-mode .user-item:hover {
+    background-color: #2a2a2a;
+}
+
+.dark-mode .user-info h4 {
+    color: #e0e0e0;
+}
+
+.dark-mode .user-info p {
+    color: #999;
+}
+
+/* Scrollbar styles */
+.dark-mode ::-webkit-scrollbar-thumb {
+    background-color: #444;
+}
+
+.dark-mode ::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
+} 

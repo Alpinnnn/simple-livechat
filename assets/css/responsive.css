@@ -1,0 +1,206 @@
+/* Responsive CSS for WhatsApp Clone */
+
+/* Tablets and small laptops */
+@media screen and (max-width: 1024px) {
+    .sidebar {
+        width: 40%;
+        min-width: 280px;
+    }
+    
+    .chat-item-name {
+        font-size: 16px;
+    }
+    
+    .chat-item-last-message {
+        font-size: 13px;
+    }
+}
+
+/* Mobile devices - landscape */
+@media screen and (max-width: 768px) {
+    .chat-container {
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .sidebar {
+        width: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        z-index: 2;
+        transition: transform 0.3s ease;
+    }
+    
+    .chat-area {
+        width: 100%;
+        position: absolute;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        z-index: 1;
+    }
+    
+    .sidebar.hidden {
+        transform: translateX(-100%);
+    }
+    
+    .chat-area.active {
+        z-index: 3;
+    }
+    
+    .back-button {
+        display: block;
+        margin-right: 10px;
+    }
+    
+    .message {
+        max-width: 75%;
+    }
+}
+
+/* Mobile devices - portrait */
+@media screen and (max-width: 480px) {
+    .login-container {
+        width: 90%;
+        padding: 20px;
+    }
+    
+    .form-group input {
+        padding: 10px;
+    }
+    
+    .chat-header {
+        padding: 8px 10px;
+    }
+    
+    .chat-contact h3 {
+        font-size: 15px;
+    }
+    
+    .chat-contact p {
+        font-size: 12px;
+    }
+    
+    .chat-messages {
+        padding: 15px;
+    }
+    
+    .message {
+        max-width: 85%;
+    }
+    
+    .message-content {
+        padding: 6px 8px;
+        font-size: 14px;
+    }
+    
+    .chat-input {
+        padding: 8px 10px;
+    }
+    
+    .chat-input input {
+        padding: 7px 10px;
+    }
+    
+    .send-btn {
+        width: 36px;
+        height: 36px;
+    }
+    
+    .modal-content {
+        width: 95%;
+    }
+}
+
+/* Back button for mobile */
+.back-button {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 20px;
+    color: #54656f;
+    cursor: pointer;
+}
+
+/* Mobile toggles */
+.mobile-toggle {
+    display: none;
+}
+
+@media screen and (max-width: 768px) {
+    .mobile-toggle {
+        display: block;
+    }
+}
+
+/* Loading spinner */
+.loading-spinner {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    border: 3px solid rgba(0, 168, 132, 0.3);
+    border-radius: 50%;
+    border-top-color: #00a884;
+    animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+.centered-loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+/* Typing indicator */
+.typing-indicator {
+    display: inline-block;
+    padding: 5px 10px;
+    background-color: rgba(225, 245, 254, 0.7);
+    border-radius: 15px;
+    margin-bottom: 10px;
+    font-size: 12px;
+    color: #555;
+}
+
+.dark-mode .typing-indicator {
+    background-color: rgba(34, 46, 53, 0.7);
+    color: #aaa;
+}
+
+.typing-dots {
+    display: inline-block;
+}
+
+.typing-dot {
+    display: inline-block;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    margin-right: 3px;
+    background: #128c7e;
+    animation: typing-dot 1.5s ease-in-out infinite;
+}
+
+.dark-mode .typing-dot {
+    background: #00a884;
+}
+
+.typing-dot:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.typing-dot:nth-child(3) {
+    animation-delay: 0.4s;
+    margin-right: 0;
+}
+
+@keyframes typing-dot {
+    0%, 60%, 100% { transform: translateY(0); }
+    30% { transform: translateY(-5px); }
+} 
